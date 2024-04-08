@@ -20,8 +20,8 @@ export default function Dash2() {
 
     tl.fromTo(
       heading.current,
-      { x: -400, fontSize: "1rem" },
-      { x: -50, fontSize: "6rem" }
+      { x: -400, fontSize: "2rem" },
+      { x: -150, fontSize: "4rem" }
     );
   });
 

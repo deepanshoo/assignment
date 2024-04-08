@@ -19,7 +19,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-white p-3 fixed w-full top-0 z-10">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-7xl ">
             <div className="flex items-center justify-between">
               <div className="flex-shrink-0 flex items-center">
                 <img
@@ -35,7 +35,7 @@ export default function Navbar() {
                       key={item.name}
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-blue-500 text-white' : 'text-gray-500 hover:bg-blue-500 hover:text-white',
+                        item.current ? 'bg-blue-500 text-white font-bold' : 'text-gray-700 hover:bg-blue-500 hover:text-white font-bold',
                         'rounded-lg px-3 py-2 text-md font-medium font-bold'
                       )}
                       aria-current={item.current ? 'page' : undefined}

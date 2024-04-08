@@ -5,6 +5,7 @@ import Dash1 from './Dash1';
 import MidContent from './MidContent';
 import Dash2 from './Dash2';
 import HoriScr from './HoriScr';
+import Dash3 from './Dash3';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <MidContent/>
       <Dash2/>
       <HoriScr/>
-      <h1>Tailwind Initialised</h1>
+      <Dash3/>
     </div>
   );
 }
