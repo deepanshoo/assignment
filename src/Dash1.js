@@ -1,25 +1,18 @@
+// Dash1 component
 import React from 'react';
-import videobg from './videobg.mp4'
+import videobg from './videobg.mp4';
 
-const links = [
-    { name: 'Open roles', href: '#' },
-    { name: 'Internship program', href: '#' },
-    { name: 'Our values', href: '#' },
-    { name: 'Meet our leadership', href: '#' },
-  ]
-  const stats = [
-    { name: 'Offices worldwide', value: '12' },
-    { name: 'Full-time colleagues', value: '300+' },
-    { name: 'Hours per week', value: '40' },
-    { name: 'Paid time off', value: 'Unlimited' },
-  ]
-  
-  export default function Dash1() {
-    return (
-      <div className="relative isolate overflow-hidden bg-gray-900 p-2 mx-auto max-w-5xl py-10 px-10 sm:px-10 sm:py-10 rounded-lg " >
-        <video
-          src={videobg} autoPlay loop muted className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"/>
-        <div
+export default function Dash1() {
+  return (
+    <div className="relative isolate overflow-hidden bg-gray-900 p-2 mx-auto max-w-5xl py-600 px-10 sm:px-10 sm:py-10 rounded-lg mt-20">
+      <video
+        src={videobg}
+        autoPlay
+        loop
+        muted
+        className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
+      />
+      <div
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
         aria-hidden="true"
       >
@@ -45,14 +38,12 @@ const links = [
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex justify-center items-center h-full">
         <div className="mx-auto max-w-2xl lg:mx-0 text-center">
-            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-6xl">Ahead App</h2>
-            <p className="mt-8 text-7xl py-8 font-bold leading-24 text-white">
+          <h2 className="text-2xl font-bold tracking-tight text-white sm:text-1xl">Ahead App</h2>
+          <p className="mt-8 text-7xl py-8 font-bold leading-24 text-white">
             Mastering your life by mastering emotions
-            </p>
+          </p>
         </div>
-        </div>
-
       </div>
-    )
-  }
-  
+    </div>
+  );
+}

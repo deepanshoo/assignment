@@ -1,24 +1,26 @@
-import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+// Navbar component
+import React from 'react';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Emotions', href: '#', current: true },
-  { name: 'Manifesto', href: '#', current: true },
-  { name: 'Self-awareness test', href: '#', current: true },
-  { name: 'Work with Us', href: '#', current: true },
-]
+  { name: 'Emotions', href: '#' },
+  { name: 'Manifesto', href: '#' },
+  { name: 'Self-awareness test', href: '#' },
+  { name: 'Work with Us', href: '#' },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-blue p-3">
+    <Disclosure as="nav" className="bg-white p-3 fixed w-full top-0 z-10">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex items-center justify-between">
+          <div className="mx-auto max-w-7xl">
+            <div className="flex items-center justify-between">
               <div className="flex-shrink-0 flex items-center">
                 <img
                   className="h-12 w-12 rounded-lg"
@@ -33,8 +35,8 @@ export default function Navbar() {
                       key={item.name}
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-white text-gray-800 hover:bg-purple-400 hover:text-white' : 'text-gray-300 hover:bg-black hover:text-white',
-                        'rounded-md px-3 py-2 text-md font-medium font-bold'
+                        item.current ? 'bg-blue-500 text-white' : 'text-gray-500 hover:bg-blue-500 hover:text-white',
+                        'rounded-lg px-3 py-2 text-md font-medium font-bold'
                       )}
                       aria-current={item.current ? 'page' : undefined}
                     >
@@ -87,5 +89,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
